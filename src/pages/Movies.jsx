@@ -27,20 +27,21 @@ const Movies = () => {
       </p>
       <ul>
         <li>
-          <Link to=":movieId">Film with id: {movieId}</Link>
+          <Link to="1">Film with id: 1</Link>
         </li>
         <li>
-          <Link to=":movieId">Film with id: {movieId}</Link>
+          <Link to="2">Film with id: 2</Link>
         </li>
         <li>
-          <Link to=":movieId">Film with id: {movieId}</Link>
+          <Link to="3">Film with id: 3</Link>
         </li>
         <li>
-          <Link to=":movieId">Film with id: {movieId}</Link>
+          <Link to="4">Film with id: 4</Link>
         </li>
         <li>
-          <Link to=":movieId">Film with id: {movieId}</Link>
+          <Link to={`${movieId}`}>Film with id: ID from api</Link>
         </li>
+        {/* останній елемент списку - запис для функції з map */}
       </ul>
     </>
   );
