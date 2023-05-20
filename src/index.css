@@ -1,5 +1,13 @@
 @import-normalize; /* bring in normalize.css styles */
 
+:root {
+  --main-text-color: #212121;
+  --secondary-text-color: #636363;
+  --border-color: #cacaca;
+  --bcg-color: rgba(135, 207, 235, 0.2);
+  --section-bcg-color: rgba(128, 128, 128, 0.1);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,6 +15,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url(https://img.freepik.com/free-vector/white-film-strip-background-with-text-space_1017-26105.jpg?w=2000&t=st=1684608712~exp=1684609312~hmac=7fede449734f185feebbd975284b91556fae3c3266ddaa79e2f61ecf10730cdc);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 code {

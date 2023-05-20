@@ -1,5 +1,6 @@
 import { Suspense, useRef } from 'react';
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
+import { Dna } from 'react-loader-spinner';
 
 const MovieDetails = () => {
   const { movieId } = useParams();
@@ -18,7 +19,23 @@ const MovieDetails = () => {
           <Link to="reviews">Reviews</Link>
         </li>
       </ul>
-      <Suspense fallback={<div>Loading subpages...</div>}>
+      <Suspense
+        fallback={
+          <Dna
+            visible={true}
+            height="200"
+            width="200"
+            ariaLabel="dna-loading"
+            wrapperStyle={{
+              position: 'fixed',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+            }}
+            wrapperClass="dna-wrapper"
+          />
+        }
+      >
         <Outlet />
       </Suspense>
     </>
