@@ -31,9 +31,9 @@
 .nav__link {
   background-image: linear-gradient(
     to right,
-    #e55d87 0%,
-    #5fc3e4 51%,
-    #e55d87 100%
+    #ff522fc9 0%,
+    #dd2477c5 51%,
+    #ff522fbe 100%
   );
   margin: 10px;
   padding: 15px 45px;
@@ -43,17 +43,18 @@
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.06em;
-  transition: 0.5s;
+  transition: var(--duration) var(--timing-function);
   background-size: 200% auto;
   color: white;
-  box-shadow: 0 0 20px #eee;
+  box-shadow: 0 0 20px #8efbffc4;
   border-radius: 25px;
   display: block;
 }
 
 .nav__link:hover {
+  scale: 1.1;
   background-position: right center; /* change the direction of the change here */
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
 }
 

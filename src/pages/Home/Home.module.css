@@ -28,10 +28,12 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: #ffffff;
   text-decoration: none;
+
+  transition: scale var(--duration) var(--timing-function);
 }
 
 .home__link:hover {
-  scale: 1.01;
+  scale: 1.05;
 }
 
 .home__img {

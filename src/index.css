@@ -6,6 +6,8 @@
   --border-color: #cacaca;
   --bcg-color: rgba(135, 207, 235, 0.2);
   --section-bcg-color: rgba(128, 128, 128, 0.1);
+  --duration: 250ms;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
