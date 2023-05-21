@@ -29,7 +29,7 @@ const Home = () => {
 
   return (
     <>
-      <h2 className={css.subtitle}>The most popular movies</h2>
+      <h1 className={css.subtitle}>The most popular movies</h1>
       <ul className={css.home__list}>
         {loading ? (
           <Dna
