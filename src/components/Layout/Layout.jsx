@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import { Dna } from 'react-loader-spinner';
 import Container from '../Container/Container';
+import PageContainer from 'components/Container/PageContainer';
 import css from './Layout.module.css';
 
 const Layout = () => {
@@ -27,34 +28,45 @@ const Layout = () => {
       </header>
       <main>
         <Container>
-          <Suspense
-            fallback={
-              <Dna
-                visible={true}
-                height="200"
-                width="200"
-                ariaLabel="dna-loading"
-                wrapperStyle={{
-                  position: 'fixed',
-                  top: '50%',
-                  left: '50%',
-                  transform: 'translate(-50%, -50%)',
-                }}
-                wrapperClass="dna-wrapper"
-              />
-            }
-          >
-            <Outlet />
-          </Suspense>
+          <PageContainer>
+            <Suspense
+              fallback={
+                <Dna
+                  visible={true}
+                  height="200"
+                  width="200"
+                  ariaLabel="dna-loading"
+                  wrapperStyle={{
+                    position: 'fixed',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                  }}
+                  wrapperClass="dna-wrapper"
+                />
+              }
+            >
+              <Outlet />
+            </Suspense>
+          </PageContainer>
         </Container>
       </main>
-      {/* <footer className={css.footer}>
+      <footer className={css.footer}>
         <Container>
           <p className={css.footer__text}>
-            &copy;Developed by Oleksandr Karpiuk. IT School GoIT
+            &copy;Developed by{' '}
+            <a
+              href="https://www.linkedin.com/in/oleksandr-karpiuk/"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className={css.footer__link}
+            >
+              Oleksandr Karpiuk
+            </a>
+            . IT School GoIT.
           </p>
         </Container>
-      </footer> */}
+      </footer>
     </>
   );
 };

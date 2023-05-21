@@ -1,6 +1,7 @@
 import { Suspense, useRef, useState, useEffect } from 'react';
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Dna } from 'react-loader-spinner';
 import { getMovieDetails } from '../../services/api';
 import css from './MovieDetails.module.css';
@@ -67,6 +68,7 @@ const MovieDetails = () => {
               }
               alt={data.original_title}
               className={css.poster__img}
+              width={330}
             />
             <div className={css.descr__wrap}>
               <h2 className={css.movie__title}>

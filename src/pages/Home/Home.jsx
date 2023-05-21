@@ -61,6 +61,8 @@ const Home = () => {
                   }
                   alt={title}
                   className={css.home__img}
+                  width={400}
+                  height={600}
                 />
                 <p className={css.home__text}>{title}</p>
               </Link>

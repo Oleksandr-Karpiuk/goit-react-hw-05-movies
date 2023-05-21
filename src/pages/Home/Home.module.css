@@ -41,6 +41,7 @@
 
 .home__img {
   object-fit: cover;
+  overflow: hidden;
 }
 
 .home__text {

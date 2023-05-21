@@ -45,8 +45,9 @@
 }
 
 .reviews__message {
-  margin-left: 150px;
-  margin-top: 40px;
+  margin: 0 auto;
+  padding: 20px 0;
 
   font-size: 30px;
+  text-align: center;
 }

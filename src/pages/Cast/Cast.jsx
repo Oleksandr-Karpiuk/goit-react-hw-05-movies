@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { getMovieCast } from '../../services/api';
 import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Dna } from 'react-loader-spinner';
 import css from './Cast.module.css';
 import PropTypes from 'prop-types';
