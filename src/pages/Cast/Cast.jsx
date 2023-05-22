@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { getMovieCast } from '../../services/api';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Dna } from 'react-loader-spinner';
 import css from './Cast.module.css';
@@ -67,6 +67,7 @@ const Cast = () => {
       ) : (
         <p className={css.cast__message}>No data found</p>
       )}
+      <ToastContainer />
     </>
   );
 };

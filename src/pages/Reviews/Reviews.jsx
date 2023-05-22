@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { getMovieReviews } from '../../services/api';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Dna } from 'react-loader-spinner';
 import css from './Reviews.module.css';
@@ -57,6 +57,7 @@ const Reviews = () => {
       ) : (
         <p className={css.reviews__message}>No reviews found</p>
       )}
+      <ToastContainer />
     </>
   );
 };

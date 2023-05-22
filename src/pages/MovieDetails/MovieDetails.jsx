@@ -1,6 +1,6 @@
 import { Suspense, useRef, useState, useEffect } from 'react';
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Dna } from 'react-loader-spinner';
 import { getMovieDetails } from '../../services/api';
@@ -116,6 +116,7 @@ const MovieDetails = () => {
           </Suspense>
         </>
       )}
+      <ToastContainer />
     </>
   );
 };

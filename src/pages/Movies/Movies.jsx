@@ -38,7 +38,8 @@ const Movies = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    setSearchParams({ query: query });
+    const nextParams = query !== '' ? { query } : {};
+    setSearchParams(nextParams);
     setQuery('');
   };
 

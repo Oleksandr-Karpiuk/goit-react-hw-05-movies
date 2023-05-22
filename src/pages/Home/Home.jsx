@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { getTrendingMovies } from '../../services/api';
 import { Dna } from 'react-loader-spinner';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import css from './Home.module.css';
 
@@ -70,6 +70,7 @@ const Home = () => {
           ))
         )}
       </ul>
+      <ToastContainer />
     </>
   );
 };
